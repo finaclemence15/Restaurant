@@ -1,5 +1,6 @@
 {%extends 'base.html'%}
-
+{% block content %}
+{{block.super}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,13 +9,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Restaurant App</title>
+    <style>
+        #backgroundimg {
+            background-image: url('static/images/background.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 450px;
+        }
+
+        #head2 {
+            color: #151515;
+            /* font-size: 60px; */
+            /* margin-left: 30%; */
+            text-align: center;
+            margin-top: 10%;
+
+        }
+        #h2{
+            text-align: center;
+            margin-top: 10%;
+        }
+    </style>
 </head>
 
 <body>
-    {% block content %}
-    {{block.super}}
-    <img src="static/images/background.png" alt="" height="500px" width="100%">
-    {% endblock %}
+
+    <div class="container-fluid">
+        <div class="row" id="backgroundimg">
+            <div class="col-md-12">
+                <h1 id="head2"> <strong>Find nearby restaurants </strong> </h1>
+            </div>
+        </div>
+        <div class="row" style="background-color: #f5fafc;">
+            
+        <div class="col-md-12">
+            <h2 id="h2"> <strong>our restaurants </strong></h2>
+        </div>
+
+        </div>
+    </div>
+
+
 </body>
 
 </html>
+{% endblock %}
