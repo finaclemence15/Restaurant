@@ -25,9 +25,28 @@
             margin-top: 10%;
 
         }
-        #h2{
+
+        #h2 {
             text-align: center;
-            margin-top: 10%;
+            margin-top: 5%;
+        }
+
+        #h21 {
+            text-align: center;
+        }
+
+        .button {
+            background-color: #ffffff;
+            /* Green */
+            border: none;
+            color: #ff6000;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            padding: 5px 50px;
         }
     </style>
 </head>
@@ -40,13 +59,88 @@
                 <h1 id="head2"> <strong>Find nearby restaurants </strong> </h1>
             </div>
         </div>
-        <div class="row" style="background-color: #f5fafc;">
-            
-        <div class="col-md-12">
-            <h2 id="h2"> <strong>our restaurants </strong></h2>
+
+        <div class="row py-5" style="background-color: #f5fafc;">
+
+            <div class="col-md-12">
+                <h2 id="h2"> <strong>our restaurants </strong></h2>
+            </div>
+            {% for resto in restaurant %}
+            <div class="col-md-3" style="margin-top: 5%;">
+                <div class="card">
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="{{resto.image.url}}" alt="image">
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <p> <img src="static/images/restaurant.png" alt="restaurant"
+                                style="border-radius: 50%; height: 30px; width: 30px;">
+                            {{resto.resto_name}} </p>
+                        <p style="margin-left: 15%;"> {{resto.location}} </p>
+
+                    </div>
+
+                </div>
+            </div>
+            {% endfor %}
         </div>
+        <div class="container" style="margin-top: 5%;">
+
+            <section class="section feature-box mb-5" id="contact">
+
+                <h2 id="h21"> <strong>How it works</strong></h2>
+                <div class="row features-big text-center wow fadeIn" data-wow-delay="0.4s" style="margin-top: 5%;">
+
+                    <div class="col-md-4 mb-5">
+
+                        <img src="static/images/step1.png" alt="step1" height="80px" width="80px"> <br> <br>
+                        <h5 class="font-weight-bold mb-4">Step one</h5>
+                        <p class="dark-grey-text" id="aboutme">+250782947093 </p>
+
+
+
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <img src="static/images/step2.png" alt="step2" height="80px" width="80px"> <br> <br>
+                        <h5 class="font-weight-bold mb-4">Step two</h5>
+                        <p class="dark-grey-text" id="aboutme"> finaclemence15@gmail.com</p>
+                        <br> <br>
+
+                    </div>
+
+                    <div class="col-md-4 mb-5">
+
+                        <img src="static/images/step3.png" alt="step3" height="80px" width="80px"> <br> <br>
+                        <h5 class="font-weight-bold mb-4">Step three</h5>
+                        <p class="dark-grey-text" id="aboutme">Nyarugenge District</p>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
 
         </div>
+
+        <div class="row py-0" style="background-color: #ff6000;">
+            <div class="col-md-6">
+                <img src="static/images/phone.png" alt="phone" height="700px" width="700px">
+            </div>
+            <div class="col-md-4" style="color: #ffffff;">
+                <h1>Get the app</h1> <br>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit, sed do eius.</p>
+                <button class="button">Submit</button>
+            </div>
+        </div>
+
     </div>
 
 

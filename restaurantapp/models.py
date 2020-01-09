@@ -6,7 +6,7 @@ class Location(models.Model):
     location_name = models.CharField(max_length =40)
     
     def __str__(self):
-        return self.location
+        return self.location_name
         
     def save_location(self):
         self.save()    
@@ -15,21 +15,22 @@ class Category(models.Model):
     category_name = models.CharField(max_length =40) 
     
     def __str__(self):
-        return self.category
+        return self.category_name
         
     def save_category(self):
         self.save()
 class Restaurant(models.Model):
     resto_name = models.CharField(max_length =50)
+    image = models.ImageField(upload_to = 'images/')
     details= models.TextField()
-    location = models.ForeignKey(Location,null = True)
+    location = models.ForeignKey(Location)
     category = models.ForeignKey(Category, null = True)
     
     def __str__(self):
         return self.resto_name
       
     
-    def save_restaurant(self):
+    def save_image(self):
         self.save()
     
         
