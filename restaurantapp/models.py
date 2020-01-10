@@ -28,7 +28,12 @@ class Restaurant(models.Model):
     
     def __str__(self):
         return self.resto_name
-      
+
+    @classmethod
+    def search_by_location(cls,search_term):
+        location = cls.objects.filter(location__location_name__icontains=search_term)
+        return location    
+          
     
     def save_image(self):
         self.save()

@@ -1,0 +1,89 @@
+{%extends 'base.html'%}
+{% block content %}
+{{block.super}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurant App</title>
+<style>
+  #hsearch {
+    text-align: center;
+    margin-top: 5%;
+  }
+  #found{
+    text-align: center;
+    margin-top: 5%;
+  }
+</style>
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+<div class="col-md-12">
+  {% if searched_restaurant%}
+  <h2 id="found">{{ searched_restaurant|length }} found restaurants</h2> <br> 
+  <div class="text-right">
+    <form class="w-50" action="{% url 'search_locations' %}" style="margin-left: 12%;">
+        <input class="w-50 p-1" type="search" placeholder="Search restaurants" name="location" aria-label="Search">
+        <button class="btn rounded p-0" type="submit" style="margin-left: -30px;"><img src="../static/images/search.png" alt="" width="15px"
+            height="15px"></button>
+      </form>
+    </div> 
+  {% else %}
+  <h2 id="found"> No restaurant found for the searched Location " {{message}} "</h2> <br> <br>
+  <div class="text-right">
+    <form class="w-50" action="{% url 'search_locations' %}" style="margin-left: 12%;">
+        <input class="w-50 p-1" type="search" placeholder="Search restaurants" name="location" aria-label="Search">
+        <button class="btn rounded p-0" type="submit" style="margin-left: -30px;"><img src="../static/images/search.png" alt="" width="15px"
+            height="15px"></button>
+      </form>
+    </div> 
+  {% endif %}
+</div>
+
+  </div><br> <br>
+
+
+  <div class="row py-5" style="background-color: #f5fafc;">
+
+    <div class="col-md-12">
+      <h2 id="hsearch"> <strong>our restaurants </strong></h2>
+    </div>
+    {% if searched_restaurant %}
+
+    {% for restaurant in searched_restaurant %}
+    <div class="col-md-3" style="margin-top: 5%;">
+      <div class="card">
+
+        <!-- Card image -->
+        <div class="view overlay">
+          <img class="card-img-top" src="{{restaurant.image.url}}" alt="image">
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body">
+
+          <p> <img src="../static/images/restaurant.png" alt="restaurant"
+              style="border-radius: 50%; height: 30px; width: 30px;">
+            {{restaurant.resto_name}} </p>
+          <p style="margin-left: 15%;"> {{restaurant.location}} </p>
+
+        </div>
+
+      </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+</div>
+</body>
+
+</html>
+{% endblock %}
