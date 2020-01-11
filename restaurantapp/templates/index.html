@@ -1,4 +1,6 @@
 {%extends 'base.html'%}
+{% load bootstrap4 %}
+{% load static%}
 {% block content %}
 {{block.super}}
 <!DOCTYPE html>
@@ -77,7 +79,7 @@
                 <h1 id="head2"> <strong>Find nearby restaurants </strong> </h1> <br> <br>
                 <div class="text-right">
                 <form class="w-50" action="{% url 'search_locations' %}" style="margin-left: 12%;">
-                    <input class="w-50 p-1" type="search" placeholder="Search restaurants" name="location" aria-label="Search">
+                    <input class="w-50 p-1" type="search" placeholder="Search Location" name="location" aria-label="Search">
                     <button class="btn rounded p-0" type="submit" style="margin-left: -30px;"><img src="static/images/search.png" alt="" width="15px"
                         height="15px"></button>
                   </form>

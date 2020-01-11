@@ -20,3 +20,9 @@ def search_locations(request):
     else:
         message = "You haven't searched for any Location"
         return render(request, 'search.html',{"message":message})
+
+def detail(request,image_id):
+        image = Restaurant.objects.get(id = image_id)
+
+       
+        return render(request,"details.html", {"image":image})

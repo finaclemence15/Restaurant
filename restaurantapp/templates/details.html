@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% load static%}
+{% block content %}
+{{block.super}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Restaurant App</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluide">
+      <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img src="../static/images/resto_bg.png" class="" width="100%" style="height: 350px;">
+            <div class="carousel-caption ">
+                  <p> <img src="../static/images/restaurant.png" alt="restaurant"
+                    style="border-radius: 50%; height: 80px; width: 80px;">
+                  {{image.resto_name}} </p>
+                <p> {{image.location}} </p>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+
+</body>
+
+</html>
+
+{% endblock %}
