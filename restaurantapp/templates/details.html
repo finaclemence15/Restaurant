@@ -19,27 +19,55 @@
 <body>
 
   <div class="container-fluide">
-      <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active">
-            <img src="../static/images/resto_bg.png" class="" width="100%" style="height: 350px;">
-            <div class="carousel-caption ">
-                  <p> <img src="../static/images/restaurant.png" alt="restaurant"
-                    style="border-radius: 50%; height: 80px; width: 80px;">
-                  {{image.resto_name}} </p>
-                <p> {{image.location}} </p>
-
-                </div>
-              </div>
-            </div>
-
+    <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img src="../static/images/resto_bg.png" class="" width="100%" style="height: 350px;">
+          <div class="carousel-caption ">
+            <!-- <p> <img src="../static/images/restaurant.png" alt="restaurant"
+                style="border-radius: 50%; height: 80px; width: 80px;">
+              {{image.resto_name}} </p>
+            <p> {{image.location}} </p> -->
+            <p style="margin-left: -90%; margin-bottom: 10%;"> <img src="../static/images/restaurant.png" alt="restaurant"
+                style="border-radius: 50%; height: 100; width: 100px;">
+              <span style="text-transform: uppercase; font-size: 30px;  margin-left: 1%">
+                <strong>{{image.resto_name}}</strong></span> <br> <span
+                style="color: #ffffff; font-size: 15px;"> {{image.location}} </span> </p>
 
           </div>
         </div>
       </div>
-    </div>
-  <!-- </div> -->
 
+
+    </div>
+
+    <div class="row py-5" style="background-color: #f5fafc;">
+      <div class="col-md-2">
+        <div class="card">
+
+          <!-- Card image -->
+          <div class="card-header">
+            <p>Info</p>
+          </div>
+          <!-- Card content -->
+          <P class="card-body">
+
+            <p>NAME {{image.resto_name}} </p>
+            <p>PHONE +(250)000 000 000</p>
+            <P>WEBSITE www.{{image.resto_name}}.com</P>
+            <p>LOCATION {{image.location}}</p>
+            <P>ONLINE DELIVERY yes</P>
+            <P>CUISINES Cafe </P>
+            <p>CURRENCY $</p>
+            <P>PRICE RANGE 2 </P>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
 </body>
 
 </html>

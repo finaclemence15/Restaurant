@@ -21,20 +21,20 @@
 
         #head2 {
             color: #151515;
-            /* font-size: 60px; */
+            font-size: 50px;
             /* margin-left: 30%; */
             text-align: center;
             margin-top: 10%;
-
         }
 
         #h2 {
             text-align: center;
-            margin-top: 5%;
+            font-size: 40px;
         }
 
         #h21 {
             text-align: center;
+            font-size: 40px;
         }
         #explore{
             background-color: #ff6000;
@@ -79,7 +79,7 @@
                 <h1 id="head2"> <strong>Find nearby restaurants </strong> </h1> <br> <br>
                 <div class="text-right">
                 <form class="w-50" action="{% url 'search_locations' %}" style="margin-left: 12%;">
-                    <input class="w-50 p-1" type="search" placeholder="Search Location" name="location" aria-label="Search">
+                    <input class="w-50 p-1" type="search" placeholder="Enter Location eg: Kimihurura, Kigali,Rwanda" name="location" aria-label="Search">
                     <button class="btn rounded p-0" type="submit" style="margin-left: -30px;"><img src="static/images/search.png" alt="" width="15px"
                         height="15px"></button>
                   </form>
@@ -93,7 +93,7 @@
                 <h2 id="h2"> <strong>our restaurants </strong></h2>
             </div>
             {% for resto in restaurant %}
-            <div class="col-md-2" style="margin-top: 5%;">
+            <div class="col-md-2"> <br> <br>
                 <div class="card">
 
                     <!-- Card image -->
@@ -106,8 +106,8 @@
 
                         <p> <img src="static/images/restaurant.png" alt="restaurant"
                                 style="border-radius: 50%; height: 30px; width: 30px;">
-                            {{resto.resto_name}} </p>
-                        <p style="margin-left: 15%;"> {{resto.location}} </p>
+                           <span style="text-transform: uppercase; font-size: 11px; margin-left: 4%;"> 
+                        <strong>{{resto.resto_name}}</strong></span> <br> <span style="color: #3b3b3b; font-size: 10px; margin-left: 20%;"> $$$ - {{resto.location}} </span> </p>
 
                     </div>
 
@@ -166,7 +166,7 @@
                 margin-top: -120px;">
             </div>
             <div class="col-md-6" style="color: #ffffff; margin-top: 7%;">
-                <h1>Get the app</h1> <br>
+                <h1 style="font-size: 40px;"><strong> Get the app </strong></h1> <br>
                 <p> Lorem ipsum dolor sit, amet consectetur <br> adipisicing elit, sed do eius.</p>
                 <button class="button">Submit</button>
             </div>

@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
 from .models import *
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
-
+@login_required(login_url='/accounts/login/')
 def index(request):
     restaurant = Restaurant.objects.all()
     return render(request, 'index.html',{'restaurant':restaurant})
@@ -23,6 +26,7 @@ def search_locations(request):
 
 def detail(request,image_id):
         image = Restaurant.objects.get(id = image_id)
-
+        ratings = Rating.objects.all()
        
-        return render(request,"details.html", {"image":image})
+        return render(request,"details.html", {"image":image,"ratings":ratings})
+    

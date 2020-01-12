@@ -12,16 +12,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Restaurant App</title>
   <style>
-    #hsearch {
+    .hsearch {
+      text-align: center;
+      font-size: 40px;
+      /* margin-top: 2%; */
+    }
+
+    #found {
+      color: #151515;
+      font-size: 40px;
+      /* margin-left: 30%; */
       text-align: center;
       margin-top: 5%;
     }
 
-    #found {
-      text-align: center;
-      margin-top: 5%;
-    }
-    #achor{
+    #achor {
       text-decoration: none;
       color: #3b3b3b;
     }
@@ -34,19 +39,21 @@
     <div class="row">
       <div class="col-md-12">
         {% if searched_restaurant%}
-        <h2 id="found">{{ searched_restaurant|length }} found restaurants</h2> <br>
+        <h2 id="found"> <strong>{{ searched_restaurant|length }} found restaurants</strong></h2> <br>
         <div class="text-right">
           <form class="w-50" action="{% url 'search_locations' %}" style="margin-left: 12%;">
-            <input class="w-50 p-1" type="search" placeholder="Search Location" name="location" aria-label="Search">
+            <input class="w-50 p-1" type="search" placeholder="Enter Location eg: Kimihurura, Kigali,Rwanda"
+              name="location" aria-label="Search">
             <button class="btn rounded p-0" type="submit" style="margin-left: -30px;"><img
                 src="../static/images/search.png" alt="" width="15px" height="15px"></button>
           </form>
         </div>
         {% else %}
-        <h2 id="found"> No restaurant found for the searched Location " {{message}} "</h2> <br> <br>
+        <h2 id="found"><strong> No restaurant found for the searched Location " {{message}} "</strong></h2> <br> <br>
         <div class="text-right">
           <form class="w-50" action="{% url 'search_locations' %}" style="margin-left: 12%;">
-            <input class="w-50 p-1" type="search" placeholder="Search Location" name="location" aria-label="Search">
+            <input class="w-50 p-1" type="search" placeholder="Enter Location eg: Kimihurura, Kigali,Rwanda"
+              name="location" aria-label="Search">
             <button class="btn rounded p-0" type="submit" style="margin-left: -30px;"><img
                 src="../static/images/search.png" alt="" width="15px" height="15px"></button>
           </form>
@@ -55,44 +62,46 @@
       </div>
 
     </div><br> <br>
+    <div class="row" style="background-color: #f5fafc;">
+      <div class="container">
+        <div class="row py-5" style="background-color: #f5fafc;">
 
-
-    <div class="row py-5" style="background-color: #f5fafc;">
-
-      <div class="col-md-12">
-        <h2 id="hsearch"> <strong>our restaurants </strong></h2>
-      </div>
-      {% if searched_restaurant %}
-
-      {% for restaurant in searched_restaurant %}
-      <div class="col-md-3" style="margin-top: 5%;">
-
-        <a href="{% url 'detail' restaurant.id %}" id="achor"> 
-        <div class="card">
-
-          <!-- Card image -->
-          <div class="view overlay">
-            <img class="card-img-top" src="{{restaurant.image.url}}" alt="image">
+          <div class="col-md-12">
+            <h2 id="h2" class="hsearch"> <strong>our restaurants </strong></h2>
           </div>
+          {% if searched_restaurant %}
 
-          <!-- Card content -->
-          <div class="card-body">
+          {% for restaurant in searched_restaurant %}
+          <div class="col-md-3" style="margin-top: 5%;">
 
-            <p> <img src="../static/images/restaurant.png" alt="restaurant"
-                style="border-radius: 50%; height: 30px; width: 30px;">
-              {{restaurant.resto_name}} </p>
-            <p style="margin-left: 15%;"> {{restaurant.location}} </p>
+            <a href="{% url 'detail' restaurant.id %}" id="achor">
+              <div class="card">
 
+                <!-- Card image -->
+                <div class="view overlay">
+                  <img class="card-img-top" src="{{restaurant.image.url}}" alt="image">
+                </div>
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                  <p> <img src="../static/images/restaurant.png" alt="restaurant"
+                          style="border-radius: 50%; height: 30px; width: 30px;">
+                     <span style="text-transform: uppercase; font-size: 12px; margin-left: 4%;"> 
+                  <strong>{{restaurant.resto_name}}</strong></span> <br> <span style="color: #3b3b3b; font-size: 10px; margin-left: 20%;"> $$$ - {{restaurant.location}} </span> </p>
+
+              </div>
+
+              </div>
+            </a>
           </div>
-
+          {% endfor %}
+          {% endif %}
         </div>
-      </a>
       </div>
-      {% endfor %}
-      {% endif %}
     </div>
-
   </div>
+
 </body>
 
 </html>

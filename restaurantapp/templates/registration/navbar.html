@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+ <style>
+ .nav-link a {
+      padding: 0 2px 4px 2px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #ff6000;
+      
+
+    }
+
+    .nav-item li:hover>a,
+    .nav-item>.nav-link>a {
+      color: #ff6000;
+      
+    }
+    #sign{
+        background-color: #ff6000;
+            /* Green */
+            border: none;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            /* display: inline-block; */
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            padding: 3px 30px;
+            border-radius: 3px;
+    }
+ </style>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="../../static/images/PODZO.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/" style="color: #ff6000;">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#h2">Restaurants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contacts">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/accounts/login">Login</a>
+                        <!-- <a class='btn btn-default' href="/accounts/login">Login</a> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/accounts/register/" id="sign">Sign up</a>                      
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
