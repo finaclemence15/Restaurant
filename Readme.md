@@ -20,9 +20,9 @@ web application for listing restaurants.
 5. Show a restaurant’s reviews upon selection of the restaurant.
 
 ## Features that is not achieved
-1. testing : because of short period of time am not able to do the test
-2. using API in Django it becomes a challenge to me so  dint use API i add information through admin dashboard
-3. designing a not yet done with the UI design becouse of the time
+1. testing : because of short period of time am not able to do the test.
+2. using API in Django it becomes a challenge to me so  dint use API i add information through admin dashboard.
+3. designing are not yet done with the UI design because of the time.
 
  
 ## Installation Requirement
@@ -81,7 +81,6 @@ Open the app on your browser, by default on ``` http://127.0.0.1:8000/ ```
 * Vs code
 * Git Hub
 * Terminal
-
 
 ## Support and contact details
 
