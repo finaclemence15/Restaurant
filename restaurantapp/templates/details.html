@@ -14,6 +14,8 @@
   <style>
 
   </style>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/boostrap.css">
 </head>
 
 <body>
@@ -24,15 +26,11 @@
         <div class="carousel-item active">
           <img src="../static/images/resto_bg.png" class="" width="100%" style="height: 350px;">
           <div class="carousel-caption ">
-            <!-- <p> <img src="../static/images/restaurant.png" alt="restaurant"
-                style="border-radius: 50%; height: 80px; width: 80px;">
-              {{image.resto_name}} </p>
-            <p> {{image.location}} </p> -->
-            <p style="margin-left: -90%; margin-bottom: 10%;"> <img src="../static/images/restaurant.png" alt="restaurant"
-                style="border-radius: 50%; height: 100; width: 100px;">
+            <p style="margin-left: -90%; margin-bottom: 10%;"> <img src="../static/images/restaurant.png"
+                alt="restaurant" style="border-radius: 50%; height: 100; width: 100px;">
               <span style="text-transform: uppercase; font-size: 30px;  margin-left: 1%">
-                <strong>{{image.resto_name}}</strong></span> <br> <span
-                style="color: #ffffff; font-size: 15px;"> {{image.location}} </span> </p>
+                <strong>{{image.resto_name}}</strong></span> <br> <span style="color: #ffffff; font-size: 15px;">
+                {{image.location}} </span> </p>
 
           </div>
         </div>
@@ -42,33 +40,70 @@
     </div>
 
     <div class="row py-5" style="background-color: #f5fafc;">
-      <div class="col-md-2">
+      <div class="col-md-4">
         <div class="card">
-
-          <!-- Card image -->
-          <div class="card-header">
-            <p>Info</p>
-          </div>
           <!-- Card content -->
-          <P class="card-body">
+          <div class="card-body">
 
-            <p>NAME {{image.resto_name}} </p>
-            <p>PHONE +(250)000 000 000</p>
-            <P>WEBSITE www.{{image.resto_name}}.com</P>
-            <p>LOCATION {{image.location}}</p>
-            <P>ONLINE DELIVERY yes</P>
-            <P>CUISINES Cafe </P>
-            <p>CURRENCY $</p>
-            <P>PRICE RANGE 2 </P>
+
+            <!--  -->
+            <ul class="nav">
+              <li class="active"><a href="#Home" data-toggle="tab" style="color: #ff6000;">INFO</a></li>
+              <li><a href="#Product" data-toggle="tab" style="color: #3b3b3b;">RATINGS</a></li>
+            </ul> <hr>
+
+
+            <div class="tab-content">
+              <div id="Home" class="tab-pane fade in active"> <br>
+                <p> <strong>NAME</strong> :  <span> {{image.resto_name}}</span>  </p> 
+                <p> <strong>PHONE</strong> :  +(250)000 000 000</p>
+                <P> <strong>WEBSITE</strong> : www.{{image.resto_name}}.com</P>
+                <p> <strong>LOCATION</strong> : {{image.location}}</p>
+                <P> <strong>ONLINE DELIVERY</strong> : yes</P>
+                <P> <strong>CUISINES</strong> : Cafe </P>
+                <p> <strong>CURRENCY</strong> : $</p>
+                <P> <strong>PRICE RANGE </strong> : 2</P>
+              </div>
+              <div id="Product" class="tab-pane fade">
+                <p> <img src="../static/images/restaurant.png" alt="restaurant"
+                  style="border-radius: 50%; height: 30px; width: 30px;">
+             <span style="font-size: 15px; margin-left: 2%;"> 
+          <strong>Yves Honore</strong></span> <br> <span style="color: #ff6000; font-size: 12px;  margin-left: 9%;">5 star </span> <br> <br>
+          <span style="color: #3b3b3b; font-size: 15px;  margin-left: 9%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
+        </p>
+
+        <p> <img src="../static/images/restaurant.png" alt="restaurant"
+          style="border-radius: 50%; height: 30px; width: 30px;">
+     <span style="font-size: 15px; margin-left: 2%;"> 
+  <strong>Yves Honore</strong></span> <br> <span style="color: #ff6000; font-size: 12px;  margin-left: 9%;">5 star </span> <br> <br>
+  <span style="color: #3b3b3b; font-size: 15px;  margin-left: 9%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
+</p>
+
+<p> <img src="../static/images/restaurant.png" alt="restaurant"
+  style="border-radius: 50%; height: 30px; width: 30px;">
+<span style="font-size: 15px; margin-left: 2%;"> 
+<strong>Yves Honore</strong></span> <br> <span style="color: #ff6000; font-size: 12px;  margin-left: 9%;">5 star </span> <br> <br>
+<span style="color: #3b3b3b; font-size: 15px;  margin-left: 9%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
+</p>
+<p> <img src="../static/images/restaurant.png" alt="restaurant"
+  style="border-radius: 50%; height: 30px; width: 30px;">
+<span style="font-size: 15px; margin-left: 2%;"> 
+<strong>Yves Honore</strong></span> <br> <span style="color: #ff6000; font-size: 12px;  margin-left: 9%;">5 star </span> <br> <br>
+<span style="color: #3b3b3b; font-size: 15px;  margin-left: 9%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
+</p>
+              </div>
+            </div>
+            <!--  -->
+          </div>
 
         </div>
-
       </div>
     </div>
-  </div>
 
   </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </html>
 
