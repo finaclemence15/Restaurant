@@ -102,7 +102,7 @@ Open the app on your browser, by default on ``` http://127.0.0.1:8000/ ```
 
                 Search result
 
-<img src = "static/images/our.png" width="600">
+<img src = "static/images/search1.png" width="600">
 
                 Info, Rating and Menu Page
                 
