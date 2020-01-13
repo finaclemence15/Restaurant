@@ -82,7 +82,7 @@ Open the app on your browser, by default on ``` http://127.0.0.1:8000/ ```
 * Git Hub
 * Terminal
 
-## Screenshoot
+## Screenshoots
 
                 Home Page
 
@@ -107,6 +107,13 @@ Open the app on your browser, by default on ``` http://127.0.0.1:8000/ ```
                 Info, Rating and Menu Page
                 
 <img src = "static/images/rating.png" width="600">
+
+
+## Link of the Demo (video) of application
+
+
+[![](static/images/hmpg.png)](https://drive.google.com/file/d/1LXb8vzjc4SIZWr_0JtMgjZoPUVmjgEPV/view)
+
 
 ## Support and contact details
 

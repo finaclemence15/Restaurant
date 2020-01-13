@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
+
 def index(request):
     restaurant = Restaurant.objects.all()
     return render(request, 'index.html',{'restaurant':restaurant})
