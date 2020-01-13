@@ -84,8 +84,21 @@ Open the app on your browser, by default on ``` http://127.0.0.1:8000/ ```
 
 ## Screenshoot
 
-```Home Page```
-<img src = "static/images/hmpg.png" width="500">
+         Home Page
+
+<img src = "static/images/hmpg.png" width="600">
+
+<img src = "static/images/our.png" width="600">
+
+<img src = "static/images/app.png" width="600">
+
+<img src = "static/images/footer.png" width="600">
+
+<img src = "static/images/search1.png" width="600">
+
+<img src = "static/images/our.png" width="600">
+
+<img src = "static/images/rating.png" width="600">
 
 ## Support and contact details
 
