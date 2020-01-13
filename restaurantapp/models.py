@@ -25,7 +25,7 @@ class Restaurant(models.Model):
     image = models.ImageField(upload_to = 'images/')
     details= models.TextField()
     location = models.ForeignKey(Location)
-    category = models.ForeignKey(Category, null = True)
+    category = models.ForeignKey(Category)
     
     def __str__(self):
         return self.resto_name
@@ -44,7 +44,7 @@ class Restaurant(models.Model):
 class Rating(models.Model):
     your_rate= models.TextField()
     restaurant = models.ForeignKey(Restaurant)
-    username= models.ForeignKey(User,on_delete=models.CASCADE, null=True) 
+    username= models.ForeignKey(User,on_delete=models.CASCADE) 
     
     def __str__(self):
         return self.your_rate
