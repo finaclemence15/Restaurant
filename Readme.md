@@ -84,7 +84,8 @@ Open the app on your browser, by default on ``` http://127.0.0.1:8000/ ```
 
 ## Screenshoot
 
-![](static/images/food.png)
+```Home Page```
+<img src = "static/images/hmpg.png" width="500">
 
 ## Support and contact details
 
