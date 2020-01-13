@@ -82,6 +82,10 @@ Open the app on your browser, by default on ``` http://127.0.0.1:8000/ ```
 * Git Hub
 * Terminal
 
+## Screenshoot
+
+![](static/images/food.png)
+
 ## Support and contact details
 
 + Email:finaclemence15@gmail.com
